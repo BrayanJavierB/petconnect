@@ -1,0 +1,137 @@
+/* Estilos base solo para el login */
+.login-container {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0077b6, #00b4d8, #90e0ef, #caf0f8);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite; /* Animación de fondo */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animación del fondo */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.login-container .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.login-container .login-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+}
+
+.login-container .profile-image {
+    width: 150px; /* Cambié el tamaño para que sea más flexible */
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.login-container .input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.login-container .password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.login-container .show-password-btn {
+    position: absolute;
+    right: 10px;
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #0077ff;
+}
+
+.login-container .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container .toggle-text {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-container .switch-btn {
+    background-color: transparent;
+    border: none;
+    color: #0077ff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Consultas de medios para hacerlo responsivo */
+@media (max-width: 768px) {
+    .login-container .login-card {
+        padding: 20px;
+        max-width: 350px;
+    }
+
+    .login-container .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .login-container .submit-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .login-container .input-field {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container .login-card {
+        padding: 15px;
+        max-width: 90%; /* Usa casi todo el ancho de la pantalla */
+    }
+
+    .login-container .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .login-container .input-field {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .login-container .submit-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,495 @@
+/*Variables Globales y Reset Básico*/
+
+:root {
+    --primary-color: #a8dadc; /* Azul claro */
+    --secondary-color: #457b9d; /* Azul intermedio */
+    --accent-color: #1d3557; /* Azul oscuro */
+    --light-color: #f1faee; /* Blanco azulado */
+    --text-color: #ffffff;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--light-color);
+    color: var(--secondary-color);
+}
+
+/*Encabezado (Header)*/
+
+.header {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    padding-bottom: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    z-index: 999; 
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    font-size: 20px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.logout-button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: var(--accent-color);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+/* Estilo para Bienvenida */
+.welcome {
+    background-color: #87CEEB;
+    color: var(--text-color);
+    padding: 4rem 2rem;
+    margin-top: -40px;
+    margin-bottom: -50px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Sección Sobre el Dispensador */
+.about {
+    background-color: var(--light-color);
+    color: var(--secondary-color);
+    padding: 4rem 2rem;
+    margin-bottom: -70px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto; /* Centra el contenido */
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.about-content h2 {
+    font-size: 3rem; /* Tamaño similar al de otras secciones */
+    margin-bottom: 1rem;
+    margin-top: -25px;
+    color: var(--accent-color);
+    text-align: center; /* Centra el título */
+}
+
+.about-content p {
+    font-size: 1.5rem; /* Tamaño del texto */
+    margin-bottom: 2rem; /* Espaciado inferior */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: var(--secondary-color);
+    text-align: justify; 
+}
+
+.about-image {
+    width: 100%; /* Imagen responsiva */
+    max-width: 200px; /* Máximo ancho */
+    border-radius: 10px; /* Bordes redondeados */
+    display: block; /* Centrar la imagen */
+    margin: 0 auto; /* Centrar horizontalmente */
+    margin-bottom: 40px;
+}
+
+.about-imagen {
+    width: 100%; /* Imagen responsiva */
+    max-width: 300px; /* Máximo ancho */
+    border-radius: 10px; /* Bordes redondeados */
+    display: block; /* Centrar la imagen */
+    margin: 20px auto; /* Centrar horizontalmente */
+}
+
+/*Características (Features) */
+
+.features {
+    background-color: #5B92E5;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.feature-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    margin-top: 1rem;
+}
+
+.icon {
+    width: 60px;
+    margin-bottom: 1rem;
+}
+
+/*Objetivos (Objectives)*/
+
+.objectives {
+    background-color: #5B92E5;
+    padding: 4rem 4rem;
+    text-align: center;
+    margin-bottom: -80px;
+}
+
+.objectives h2 {
+    margin-top: -30px;
+    font-size: 2.5rem; /* Asegúrate que sea del mismo tamaño que el h2 de características */
+    margin-bottom: 2rem;
+    color: #ffffff; /* Cambia a var(--dark-color) si se usa en características */
+}
+
+.objective-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 50px;
+    margin-bottom: 1rem;
+}
+
+.card-content h3 {
+    margin-bottom: 1rem;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/*Conexión IoT*/
+
+.iot-connection {
+    background-color: #f0f8ff; /* Azul claro suave */
+    color: #1d3557; /* Azul oscuro */
+    padding: 5rem 2rem;
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    margin: 3rem 0; /* Espacio superior e inferior */
+}
+
+.iot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem; /* Más espacio entre las columnas */
+    align-items: center;
+    justify-items: center;
+}
+
+.iot-text {
+    max-width: 600px; /* Más ancho para que el texto respire */
+    text-align: justify; /* Justificar texto para mejor lectura */
+    font-size: 1.1rem; /* Aumentar ligeramente el tamaño de la fuente */
+    line-height: 1.8; /* Espaciado entre líneas */
+    color: #333; /* Texto más oscuro para legibilidad */
+}
+
+.iot-text a {
+    color: #457b9d; /* Color de enlace acorde al esquema de color */
+    text-decoration: underline; /* Subrayado para resaltar enlaces */
+    font-weight: bold; /* Resaltar enlaces */
+}
+
+.iot-text ol {
+    margin: 2rem 0;
+    padding-left: 2rem;
+    list-style-type: decimal;
+    color: #457b9d; /* Azul intermedio para el texto de la lista */
+    font-size: 1.1rem; /* Aumentar tamaño de la lista */
+}
+
+.iot-text ol li {
+    margin-bottom: 1rem; /* Espacio entre los ítems de la lista */
+}
+
+.iot-image img {
+    max-width: 400px; /* Aumentar el tamaño de la imagen */
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
+    transition: transform 0.3s, box-shadow 0.3s; /* Añadir transición para el efecto de hover */
+}
+
+.iot-image img:hover {
+    transform: scale(1.1); /* Ampliar ligeramente en hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Sombra más intensa en hover */
+}
+
+.iot-connection h2 {
+    font-size: 2.5rem; /* Tamaño más grande del título */
+    color: #1d3557; /* Azul oscuro para el título */
+    margin-bottom: 2rem;
+    text-align: center; /* Centrar el título */
+    font-weight: bold; /* Negrita */
+}
+
+@media (max-width: 768px) {
+    .iot-grid {
+        grid-template-columns: 1fr; /* Una sola columna en dispositivos más pequeños */
+        gap: 2rem; /* Reducir el espacio entre las columnas */
+    }
+
+    .iot-text {
+        font-size: 1rem; /* Disminuir el tamaño de la fuente */
+        line-height: 1.5; /* Reducir el espaciado entre líneas */
+    }
+
+    .iot-connection h2 {
+        font-size: 2rem; /* Reducir tamaño del título en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .iot-text {
+        padding: 0 1rem; /* Añadir padding lateral en móviles para mejor lectura */
+    }
+
+    .iot-image img {
+        max-width: 100%; /* Asegurar que la imagen no exceda el ancho del contenedor */
+    }
+}
+/*codigo fuente de arduino ide*/
+
+.iot-code-explanation {
+    background-color: #f0f8ff; /* Azul claro suave */
+    color: #1d3557; /* Azul oscuro */
+    padding: 5rem 2rem; /* Espaciado interior */
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    margin: 3rem 0; /* Espacio superior e inferior */
+}
+
+.iot-code-image {
+    text-align: center; /* Centrar la imagen */
+    margin: 2rem 0; /* Espacio alrededor de la imagen */
+}
+
+.codigo-image {
+    max-width: 150px; 
+    height: auto; /* Mantener la relación de aspecto */
+}
+
+.iot-code-explanation h2 {
+    font-size: 2.5rem; /* Tamaño del título */
+    color: #1d3557; /* Azul oscuro para el título */
+    margin-bottom: 2rem; /* Espacio inferior */
+    text-align: center; /* Centrar el título */
+    font-weight: bold; /* Negrita */
+}
+
+.iot-code-explanation h3 {
+    font-size: 1.8rem; /* Tamaño de los subtítulos */
+    margin-top: 2rem; /* Espacio superior */
+    margin-bottom: 1rem; /* Espacio inferior */
+    color: #457b9d; /* Color acorde al esquema */
+}
+
+.iot-code-explanation p {
+    line-height: 1.6; /* Altura de línea para mayor legibilidad */
+    margin-bottom: 1rem; /* Espacio inferior */
+}
+
+.iot-code-explanation pre {
+    background-color: #ffffff; /* Fondo blanco para el código */
+    color: #1d3557; /* Texto oscuro para el código */
+    padding: 1rem; /* Espaciado interior */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow-x: auto; /* Desplazamiento horizontal */
+    white-space: pre-wrap; /* Ajustar el texto */
+    font-family: 'Courier New', Courier, monospace; /* Fuente para código */
+}
+
+.iot-code-explanation-grid {
+    display: flex; /* Usar flexbox para el layout */
+    flex-direction: column; /* Columna en dispositivos pequeños */
+    gap: 2rem; /* Espacio entre elementos */
+}
+
+@media (min-width: 768px) {
+    .iot-code-explanation-grid {
+        flex-direction: row; /* Cambiar a fila en pantallas más grandes */
+    }
+
+    .iot-explanation-text {
+        flex: 1; /* Ocupa el espacio disponible */
+    }
+}
+
+/*Formulario de Contacto (Contact)*/
+
+.contact {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent-color);
+}
+
+/*Pie de Página (Footer)*/
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem;
+}
+
+/*Responsividad (Responsive Design)*/
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Ocultar menú por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 65px;
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links li {
+        border-top: 5px solid var(--light-color);
+        border-bottom: 5px solid var(--light-color);
+        width: 100%;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.4rem;
+        font-weight: bold;
+        width: 100%;
+        padding: 0.5rem 0;
+        box-sizing: border-box;
+    }
+
+    .welcome h2 {
+        font-size: 2.5rem; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    .about-content h2 {
+        font-size: 2rem; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    .about-content p {
+        font-size: 1rem; /* Tamaño de texto más pequeño en pantallas pequeñas */
+    }
+}

@@ -1,0 +1,100 @@
+/* Estilos base solo para el dispensador */
+.dispensador-container {
+    width: 100vw; /* Asegura que el div ocupe todo el ancho de la pantalla */
+    height: 100vh; /* Asegura que el div ocupe toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(135deg, #0077b6, #00b4d8, #90e0ef, #caf0f8);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+/* Animación del fondo */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Estilos para el h1 */
+.dispensador-container h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.dispensador-container h2 {
+    color: white;
+    font-size: 30px;
+    margin-top: -10px; /* Cuadra el h2 cerca de la imagen */
+    margin-bottom: 20px; /* Ajusta espacio entre h2 y botón */
+}
+
+/* Estilos para la imagen */
+.dispensador-container .image {
+    width: 300px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilos para el botón */
+.dispensador-container .button {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    background-color: #0077b6;
+    border: none;
+    font-weight: bold; 
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dispensador-container .button:hover {
+    background-color: #00b4d8;
+}
+
+/* Consultas de medios para hacerlo responsivo */
+@media (max-width: 768px) {
+    .dispensador-container h1 {
+        font-size: 2rem; /* Reduce el tamaño del texto en pantallas más pequeñas */
+    }
+
+    .dispensador-container h2 {
+        font-size: 24px; /* Reduce el tamaño del h2 */
+    }
+
+    .dispensador-container .image {
+        width: 250px; /* Reduce el tamaño de la imagen */
+    }
+
+    .dispensador-container .button {
+        padding: 12px 25px; /* Ajusta el tamaño del botón */
+        font-size: 18px; /* Ajusta el tamaño de la fuente del botón */
+    }
+}
+
+@media (max-width: 480px) {
+    .dispensador-container h1 {
+        font-size: 1.5rem; /* Reduce aún más el tamaño del texto */
+    }
+
+    .dispensador-container h2 {
+        font-size: 20px; /* Reduce aún más el tamaño del h2 */
+    }
+
+    .dispensador-container .image {
+        width: 200px; /* Reduce el tamaño de la imagen */
+    }
+
+    .dispensador-container .button {
+        padding: 10px 20px; /* Ajusta el tamaño del botón */
+        font-size: 16px; /* Ajusta el tamaño de la fuente del botón */
+    }
+}
