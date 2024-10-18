@@ -47,7 +47,7 @@ const Login = () => {
                 if (docSnap.exists()) {
                     const nombreUsuario = docSnap.data().nombre;
                     console.log("Bienvenido, " + nombreUsuario);
-                    navigate("/"); // Redirigir a la página de bienvenida
+                    navigate("/"); // Redirigir a la página de bienvenida 
                 } else {
                     console.log("El documento no existe");
                 }

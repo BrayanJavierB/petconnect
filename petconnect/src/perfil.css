@@ -120,7 +120,23 @@
     color: #333;
     margin-bottom: 10px;
 }
-
+/*boton volver*/
+.volver-container {
+    position: absolute; /* Fija la posición del ícono */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    left: 20px; /* Ajusta la distancia desde la parte izquierda */
+  }
+  
+  .volver-icon {
+    width: 50px; /* Ajusta el ancho de la imagen */
+    height: 50px; /* Ajusta la altura de la imagen */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+  }
+  
+  .volver-icon:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+  }
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .profile-container {

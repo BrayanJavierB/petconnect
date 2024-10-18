@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth';
 import { db, auth } from './credenciales'; // Importamos db y auth de credenciales.js
+import { Link } from 'react-router-dom';
+import Volver from "./assets/deshacer.png";
 import './Perfil.css'; // Importamos estilos para un diseño bonito
 
 const Perfil = () => {
@@ -88,10 +90,12 @@ const Perfil = () => {
   if (!user) {
     return <p>Debes iniciar sesión para ver tu perfil.</p>;
   }
+  
 
   return (
     <div className="perfil-body">
       <div className="profile-container">
+        
         <h2>Perfil</h2>
 
         {isEditing ? (
@@ -229,12 +233,18 @@ const Perfil = () => {
                 className="return-btn"
                 onClick={() => setIsEditing(false)}
               >
-                Volver
+                Ver Perfil
               </button>
             </div>
           </form>
         ) : (
           <div className="profile-view">
+            {/* Agregamos el botón de volver al Home */}
+        <div className="volver-container">
+          <Link to="/">
+            <img src={Volver} alt="Volver" className="volver-icon" />
+          </Link>
+        </div>
             <p><strong>Nombre:</strong> {profileData.nombre}</p>
             <p><strong>Apellido:</strong> {profileData.apellido}</p>
             <p><strong>Edad:</strong> {profileData.edad} años</p>

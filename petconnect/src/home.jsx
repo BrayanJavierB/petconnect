@@ -313,22 +313,7 @@ char pass[] = "";`}
         </div>
     </div>
 </section>
-
-
-
-                {/* Sección de Contacto */}
-                <section className="contact" id="contacto">
-                    <h2>Contáctanos</h2>
-                    <p>¿Tienes dudas? Envíanos un mensaje.</p>
-                    <form className="contact-form">
-                        <input type="text" placeholder="Nombre" required />
-                        <input type="email" placeholder="Correo electrónico" required />
-                        <textarea placeholder="Mensaje" required></textarea>
-                        <button type="submit">Enviar</button>
-                    </form>
-                </section>
-            </main>
-
+</main>
             <footer>
                 <p>&copy; 2024 PETCONNECT. Todos los derechos reservados.</p>
             </footer>
