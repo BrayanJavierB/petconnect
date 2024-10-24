@@ -5,6 +5,7 @@ import home from "./assets/hogar.png";
 import codigo from "./assets/codigo.png";
 import iot from "./assets/iot.png";
 import alimentos from "./assets/alimentos.png";
+import manual from "./assets/manual.png";
 import mascotas from "./assets/mascotas.png";
 import { getAuth, signOut } from "firebase/auth";
 import { Link } from 'react-router-dom';
@@ -132,7 +133,7 @@ const Home = ({ nombreUsuario }) => {
                         </div>
                     </div>
                 </section>
-
+            
                 {/* Aplicación y Conexión IoT */}
                 <section className="iot-connection" id="iot">
                 <h2>Conexión IoT con Blynk</h2>
@@ -313,6 +314,47 @@ char pass[] = "";`}
         </div>
     </div>
 </section>
+{/* Manual Usuario */}
+<section className="iot-connection" id="iot">
+                <h2>Manual Usuario</h2>
+                <div className="iot-grid">
+                    <div className="iot-text">
+                    <p>
+        Este manual de usuario describe cómo utilizar el dispositivo dispensador de comida, premios y vitaminas para mascotas.
+      </p>
+      <ul>
+        <li>Cómo configurar el dispositivo con la aplicación móvil</li>
+        <li>Cómo programar la alimentación y premios</li>
+        <li>Cómo realizar actualizaciones de software</li>
+        <li>Troubleshooting (Solución de problemas comunes)</li>
+      </ul>
+
+      <h2>Descargar Manual en PDF</h2>
+      <p>
+        Haz clic en el siguiente enlace para descargar el manual de usuario completo:
+      </p>
+      <a href="https://drive.google.com/file/d/18gCnRWAX__9ZvBdpzjRcc7trRg3pZGWX/view?usp=sharing">
+        Descargar Manual de Usuario
+      </a>
+    </div>
+            <div className="iot-image">
+            <a href="https://drive.google.com/file/d/18gCnRWAX__9ZvBdpzjRcc7trRg3pZGWX/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <img src={manual} alt="Icono manual" className="icon" />
+            </a>
+        </div>
+                </div>
+            </section>
+            {/* Sección de Contacto 
+            <section className="contact" id="contacto">
+                    <h2>Contáctanos</h2>
+                    <p>¿Tienes dudas? Envíanos un mensaje.</p>
+                    <form className="contact-form">
+                        <input type="text" placeholder="Nombre" required />
+                        <input type="email" placeholder="Correo electrónico" required />
+                        <textarea placeholder="Mensaje" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </section>*/}
 </main>
             <footer>
                 <p>&copy; 2024 PETCONNECT. Todos los derechos reservados.</p>
