@@ -35,13 +35,13 @@ const Home = ({ nombreUsuario }) => {
                 <nav className="navbar">
                     <h1 className="logo">PETCONNECT</h1>
                     <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-                        <li><a href="#objetivos"><strong>Objetivos</strong></a></li>
                         <li><a href="#caracteristicas"><strong>Características</strong></a></li>
                         <li><a href="#iot"><strong>Conexion IOT</strong></a></li>
                         <li><a href="#iot-code-explanation"><strong>Codigo fuente</strong></a></li>
-                        <li><a href="#contacto"><strong>Contacto</strong></a></li>
                         <li><Link to="/dispensador"><strong>Activar Dispensador</strong></Link></li>
                         <li><Link to="/perfil"><strong>Perfil</strong></Link></li>
+                        <li><Link to="/reminder-agent"><strong>Agente Inteligente</strong></Link></li> {/* Enlace agregado */}
+                        
                     </ul>
                     <button className="logout-button" onClick={handleLogout}>
                         Cerrar Sesión

@@ -1,20 +1,20 @@
-
+// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { db, auth } from './credenciales'; // Importa auth y db
+import { db, auth } from './credenciales';
 import { onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
 import Login from './login';
 import Home from './home';
 import Perfil from './perfil';
 import Dispensador from './Dispensador';
+import ReminderAgent from './components/ReminderAgent'; // Importa ReminderAgent
 
 function App() {
     const [usuario, setUsuario] = useState(null);
     const [nombreUsuario, setNombreUsuario] = useState(null);
     const [error, setError] = useState(null);
 
-    // Función para obtener el nombre del usuario
     const obtenerNombreUsuario = async (uid, correo) => {
         try {
             const nombreGuardado = localStorage.getItem(`nombreUsuario-${correo}`);
@@ -57,15 +57,15 @@ function App() {
         <Router>
             <Routes>
                 {error && <p className="error-message">{error}</p>}
-                <Route
-                    path="/"
-                    element={usuario ? <Home nombreUsuario={nombreUsuario} /> : <Login />}
-                />
+                <Route path="/" element={usuario ? <Home nombreUsuario={nombreUsuario} /> : <Login />} />
                 <Route path="/dispensador" element={<Dispensador />} />
                 <Route path="/perfil" element={<Perfil />} />
+                <Route path="/reminder-agent" element={<ReminderAgent nombreUsuario={nombreUsuario} />} /> {/* Pass nombreUsuario */}
             </Routes>
         </Router>
     );
 }
 
 export default App;
+
+
